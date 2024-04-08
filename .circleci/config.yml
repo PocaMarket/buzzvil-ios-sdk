@@ -1,0 +1,63 @@
+version: 2.1
+
+parameters:
+  xcode-version:
+    type: string
+    default: 15.1.0
+  request_id:
+    type: string
+    default: ""
+  execute-workflow-name:
+    type: string
+    default: ""
+  version:
+    type: string
+    default: ""
+  product_name:
+    type: string
+    default: ""
+  archive_url:
+    type: string
+    default: ""
+  checksum:
+    type: string
+    default: ""
+executors:
+  default-executor:
+    macos:
+      xcode: << pipeline.parameters.xcode-version >>
+    working_directory: /Users/distiller/project
+    environment:
+      REQUEST_ID: << pipeline.parameters.request_id >>
+
+#   ____   ___   ____    _____
+#  |    | /   \ |    \  / ___/
+#  l__  |Y     Y|  o  )(   \_ 
+#  __j  ||  O  ||     T \__  T
+# /  |  ||     ||  O  | /  \ |
+# \  `  |l     !|     | \    |
+#  \____j \___/ l_____j  \___j
+
+jobs:
+  hello:
+    executor: default-executor
+    steps:
+      - run:
+          name: default
+          command: echo 'Hello Buzzvil iOS SDK'
+
+#  __    __   ___   ____   __  _  _____  _       ___   __    __  _____
+# |  T__T  T /   \ |    \ |  l/ ]|     || T     /   \ |  T__T  T/ ___/
+# |  |  |  |Y     Y|  D  )|  ' / |   __j| |    Y     Y|  |  |  (   \_ 
+# |  |  |  ||  O  ||    / |    \ |  l_  | l___ |  O  ||  |  |  |\__  T
+# l  `  '  !|     ||    \ |     Y|   _] |     T|     |l  `  '  !/  \ |
+#  \      / l     !|  .  Y|  .  ||  T   |     |l     ! \      / \    |
+#   \_/\_/   \___/ l__j\_jl__j\_jl__j   l_____j \___/   \_/\_/   \___j
+
+workflows:
+  workflow-default:
+    when:
+      and:
+        - not: << pipeline.parameters.execute-workflow-name >>
+    jobs:
+      - hello
