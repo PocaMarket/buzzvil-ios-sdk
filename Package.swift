@@ -15,9 +15,7 @@ let package = Package(
       ]
     ),
   ],
-  dependencies: [
-    .package(url: "https://github.com/googleads/swift-package-manager-google-interactive-media-ads-ios", .upToNextMajor(from: "3.22.1")),
-  ],
+  dependencies: [],
   targets: [
     .target(
       name: "BuzzvilSDKTarget",
@@ -26,24 +24,23 @@ let package = Package(
         "BuzzAdBenefitSDK",
         "BuzzBoosterSDK",
         "BuzzRxSwift",
-        .product(name: "GoogleInteractiveMediaAds", package: "swift-package-manager-google-interactive-media-ads-ios"),
       ],
       path: "Sources/BuzzvilSDKTarget"
     ),
     .binaryTarget(
       name: "BuzzvilSDK",
-      url: "https://storage.googleapis.com/buzzvil-client-app/bab-ios/12851/BuzzvilSDK.zip",
-      checksum: "d5be6df04c076edc70a4f9ad4a6e864be657b5991dd4684c69cc14a67253b43f"
+      url: "https://storage.googleapis.com/buzzvil-client-app/bab-ios/12890/BuzzvilSDK.zip",
+      checksum: "a8159f79fbc4947e24a03e95e33f604de899f83d6e28842ee3706996d6a078e6"
     ),
     .binaryTarget(
       name: "BuzzAdBenefitSDK",
-      url: "https://storage.googleapis.com/buzzvil-client-app/bab-ios/12851/BuzzAdBenefitSDK.zip",
-      checksum: "52feb93be0398c11d64d8441d8734e32eb49a3ba40459d1016bed30c3d393384"
+      url: "https://storage.googleapis.com/buzzvil-client-app/bab-ios/12890/BuzzAdBenefitSDK.zip",
+      checksum: "d19713dc40814e8452a7191c69424a342edda9d49017e870c2e4a2074d282e60"
     ),
     .binaryTarget(
       name: "BuzzBoosterSDK",
-      url: "https://storage.googleapis.com/buzzvil-client-app/bab-ios/12851/BuzzBoosterSDK.zip",
-      checksum: "3d42ec63b9335c0c6a42a200af541b04f128786b46831dfe3f5075a1d5cd29d1"
+      url: "https://storage.googleapis.com/buzzvil-client-app/bab-ios/12890/BuzzBoosterSDK.zip",
+      checksum: "164f01513fb56e300600d54857fc00b57841f147df55ea210948675941d4e8a5"
     ),
     .binaryTarget(
       name: "BuzzRxSwift",
