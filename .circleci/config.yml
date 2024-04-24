@@ -4,6 +4,9 @@ parameters:
   xcode-version:
     type: string
     default: 15.1.0
+resource-class:
+    type: string
+    default: macos.m1.medium.gen1
   request_id:
     type: string
     default: ""
