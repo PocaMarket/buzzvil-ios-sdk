@@ -32,18 +32,18 @@ let package = Package(
     ),
     .binaryTarget(
       name: "BuzzvilSDK",
-      url: "https://storage.googleapis.com/buzzvil-client-app/bab-ios/18108/BuzzvilSDK.zip",
-      checksum: "9a10c0730af48bae5d7d0c9bb64ee20c0f695104e1c76730dab14ef4f4b360f9"
+      url: "https://storage.googleapis.com/buzzvil-client-app/bab-ios/18675/BuzzvilSDK.zip",
+      checksum: "98902410c442f196c0d5e080dc12aaae901fca9bf869fde10890065b89a75761"
     ),
     .binaryTarget(
       name: "BuzzAdBenefitSDK",
-      url: "https://storage.googleapis.com/buzzvil-client-app/bab-ios/18108/BuzzAdBenefitSDK.zip",
-      checksum: "4d25ec9b5387f2ede6427f33994aa62d1ae9242a0101dabc59dc9c3890b9384c"
+      url: "https://storage.googleapis.com/buzzvil-client-app/bab-ios/18675/BuzzAdBenefitSDK.zip",
+      checksum: "9e407fb5991f1707fcda4d90948eda1b4c54e6cba21be0a7a2ab4c5d7c68428c"
     ),
     .binaryTarget(
       name: "BuzzBoosterSDK",
-      url: "https://storage.googleapis.com/buzzvil-client-app/bab-ios/18108/BuzzBoosterSDK.zip",
-      checksum: "ef63b0c963fb567ef4bab4222d3cc28dea7f6b0bcc20d32ccb2e4b0c7ecbee10"
+      url: "https://storage.googleapis.com/buzzvil-client-app/bab-ios/18675/BuzzBoosterSDK.zip",
+      checksum: "c60ce3883582a1fa70d9a829c7240f162a7b071ab6ab2abb9138a5a1a41292c9"
     ),
     .binaryTarget(
       name: "BuzzRxSwift",
