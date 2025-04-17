@@ -14,9 +14,16 @@ let package = Package(
         "BuzzvilSDKTarget",
       ]
     ),
+    .library(
+      name: "BuzzAvatyeAdCash",
+      targets: [
+        "BuzzAvatyeAdCashTarget",
+      ]
+    ),
   ],
   dependencies: [
     .package(url: "https://github.com/googleads/swift-package-manager-google-interactive-media-ads-ios", .upToNextMajor(from: "3.23.0")),
+    .package(url: "https://github.com/avatye-developer/sdk_adcash_ios", .upToNextMinor(from: "3.1.26")),
   ],
   targets: [
     .target(
@@ -29,6 +36,14 @@ let package = Package(
         .product(name: "GoogleInteractiveMediaAds", package: "swift-package-manager-google-interactive-media-ads-ios"),
       ],
       path: "Sources/BuzzvilSDKTarget"
+    ),
+    .target(
+      name: "BuzzAvatyeAdCashTarget",
+      dependencies: [
+        "BuzzAvatyeAdCash",
+        .product(name: "AvatyeAdCash", package: "sdk_adcash_ios"),
+      ],
+      path: "Sources/BuzzAvatyeAdCashTarget"
     ),
     .binaryTarget(
       name: "BuzzvilSDK",
@@ -44,6 +59,11 @@ let package = Package(
       name: "BuzzBoosterSDK",
       url: "https://storage.googleapis.com/buzzvil-client-app/bab-ios/19316/BuzzBoosterSDK.zip",
       checksum: "c16f45df0dc630a1891f45bdbf8c9a4792e7cc041566073913e42122cabbe8ca"
+    ),
+    .binaryTarget(
+      name: "BuzzAvatyeAdCash",
+      url: "https://storage.googleapis.com/buzzvil-client-app/bab-ios/19316/BuzzAvatyeAdCash.zip",
+      checksum: "b04de856ad0fffdc5ad272bbe84a611d396733913bb2277ec70c489c4e03aad2"
     ),
     .binaryTarget(
       name: "BuzzRxSwift",
