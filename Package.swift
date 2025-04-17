@@ -23,7 +23,7 @@ let package = Package(
   ],
   dependencies: [
     .package(url: "https://github.com/googleads/swift-package-manager-google-interactive-media-ads-ios", .upToNextMajor(from: "3.23.0")),
-    .package(url: "https://github.com/avatye-developer/sdk_adcash_ios", .upToNextMinor(from: "3.1.26")),
+    //.package(url: "https://github.com/avatye-developer/sdk_adcash_ios", .upToNextMinor(from: "3.1.26")),
   ],
   targets: [
     .target(
@@ -41,7 +41,6 @@ let package = Package(
       name: "BuzzAvatyeAdCashTarget",
       dependencies: [
         "BuzzAvatyeAdCash",
-        .product(name: "AvatyeAdCash", package: "sdk_adcash_ios"),
       ],
       path: "Sources/BuzzAvatyeAdCashTarget"
     ),
