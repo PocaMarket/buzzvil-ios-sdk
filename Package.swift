@@ -36,14 +36,15 @@ let package = Package(
         .product(name: "GoogleInteractiveMediaAds", package: "swift-package-manager-google-interactive-media-ads-ios"),
       ],
       path: "Sources/BuzzvilSDKTarget",
-      exclude: ["Sources/BuzzAvatyeAdCashTarget"]
+      sources: ["Sources/BuzzvilSDKTarget"]
     ),
     .target(
       name: "BuzzAvatyeAdCashTarget",
       dependencies: [
         "BuzzAvatyeAdCash",
       ],
-      path: "Sources/BuzzAvatyeAdCashTarget"
+      path: "Sources/BuzzAvatyeAdCashTarget",
+      sources: ["Sources/BuzzAvatyeAdCashTarget"]
     ),
     .binaryTarget(
       name: "BuzzvilSDK",
